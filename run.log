@@ -1,0 +1,25 @@
+2026-04-15T10:39:59 | INFO     | ============================================================
+2026-04-15T10:39:59 | INFO     | Job started
+2026-04-15T10:39:59 | INFO     |   input    : data.csv
+2026-04-15T10:39:59 | INFO     |   config   : config.yaml
+2026-04-15T10:39:59 | INFO     |   output   : metrics.json
+2026-04-15T10:39:59 | INFO     |   log_file : run.log
+2026-04-15T10:39:59 | INFO     | ============================================================
+2026-04-15T10:39:59 | INFO     | Config loaded and validated
+2026-04-15T10:39:59 | INFO     |   version : v1
+2026-04-15T10:39:59 | INFO     |   seed    : 42
+2026-04-15T10:39:59 | INFO     |   window  : 5
+2026-04-15T10:39:59 | DEBUG    | NumPy random seed set to 42
+2026-04-15T10:39:59 | INFO     | Dataset loaded: 10000 rows, 6 columns
+2026-04-15T10:39:59 | DEBUG    | Columns: ['timestamp', 'open', 'high', 'low', 'close', 'volume']
+2026-04-15T10:39:59 | INFO     | close — min=26708.9300  max=35578.0000  nulls=0
+2026-04-15T10:39:59 | INFO     | Computing rolling mean (window=5) ...
+2026-04-15T10:39:59 | INFO     | Rolling mean computed — warm-up rows excluded: 4  valid rows: 9996
+2026-04-15T10:39:59 | INFO     | Generating binary signal (close > rolling_mean → 1 else 0) ...
+2026-04-15T10:39:59 | INFO     | Signal generated — rows used: 9996  signal_rate: 0.499100
+2026-04-15T10:39:59 | DEBUG    | Signal value counts: {0.0: 5007, 1.0: 4989}
+2026-04-15T10:39:59 | INFO     | Metrics written to metrics.json
+2026-04-15T10:39:59 | INFO     | Metrics summary: {"version": "v1", "rows_processed": 9996, "metric": "signal_rate", "value": 0.4991, "latency_ms": 24, "seed": 42, "status": "success"}
+2026-04-15T10:39:59 | INFO     | ============================================================
+2026-04-15T10:39:59 | INFO     | Job completed successfully | latency=24 ms
+2026-04-15T10:39:59 | INFO     | ============================================================
